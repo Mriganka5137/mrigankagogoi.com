@@ -14,18 +14,23 @@ const NavBar = () => {
           Mriganka <span className=" text-customGreen">gogoi</span>
         </h3>
       </Link>
-      <div className=" flex justify-between gap-5">
+      <div className=" flex justify-between gap-7">
         <Link href="https://github.com/Mriganka5137">
           <Image src={github} width={25} height={25} alt="github" />
         </Link>
         <Link href="https://github.com/Mriganka5137">
-          <Image src={frontendMentor} width={25} height={25} alt="github" />
+          <Image
+            src={frontendMentor}
+            width={25}
+            height={25}
+            alt="frontend mentor"
+          />
         </Link>
         <Link href="https://github.com/Mriganka5137">
-          <Image src={linkedin} width={25} height={25} alt="github" />
+          <Image src={linkedin} width={25} height={25} alt="linkedin" />
         </Link>
         <Link href="https://github.com/Mriganka5137">
-          <Image src={twitter} width={25} height={25} alt="github" />
+          <Image src={twitter} width={25} height={25} alt="twitter" />
         </Link>
       </div>
     </nav>

@@ -80,7 +80,7 @@
     @apply bg-background text-foreground font-spaceGrotesk;
   }
   h1 {
-    @apply text-[88px] font-bold leading-[88px] tracking-[-2.5px];
+    @apply text-[88px]  font-bold leading-[88px] tracking-[-2.5px];
   }
   h2 {
     @apply text-[46px] font-bold leading-[56px] tracking-[-1.5px];
@@ -89,6 +89,6 @@
     @apply text-[24px] font-bold leading-[32px];
   }
   p {
-    @apply text-[18px] leading-[28px];
+    @apply text-[18px] leading-[28px] text-customGrey;
   }
 }
