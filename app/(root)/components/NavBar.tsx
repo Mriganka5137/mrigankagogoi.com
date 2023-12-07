@@ -5,18 +5,25 @@ import github from "@/public/assets/images/icon-github.svg";
 import frontendMentor from "@/public/assets/images/icon-frontend-mentor.svg";
 import linkedin from "@/public/assets/images/icon-linkedin.svg";
 import twitter from "@/public/assets/images/icon-twitter.svg";
+import HeroImage from "@/public/assets/images/profile2.jpeg";
 
 const NavBar = () => {
   return (
-    <nav className=" max-w-screen-2xl mx-auto border px-[165px] py-9 flex justify-between">
-      <Link href="/">
-        <h3>
+    <div className=" max-w-screen-desktop mx-auto border px-[165px] py-9 flex justify-between max-tablet:px-[30px] relative ">
+      <Link href="/" className=" z-10">
+        <h3 className="">
           Mriganka <span className=" text-customGreen">gogoi</span>
         </h3>
       </Link>
-      <div className=" flex justify-between gap-7">
+      <div className=" flex justify-between gap-7 z-10 max-tablet:hidden">
         <Link href="https://github.com/Mriganka5137">
-          <Image src={github} width={25} height={25} alt="github" />
+          <Image
+            src={github}
+            width={25}
+            height={25}
+            alt="github"
+            className=""
+          />
         </Link>
         <Link href="https://github.com/Mriganka5137">
           <Image
@@ -33,7 +40,14 @@ const NavBar = () => {
           <Image src={twitter} width={25} height={25} alt="twitter" />
         </Link>
       </div>
-    </nav>
+      <div className=" brightness-50 absolute top-32 right-[165px] max-laptop:hidden ">
+        <Image
+          src={HeroImage}
+          alt="hero Image"
+          className=" w-[380px] h-[600px] opacity-75 "
+        />
+      </div>
+    </div>
   );
 };
 
