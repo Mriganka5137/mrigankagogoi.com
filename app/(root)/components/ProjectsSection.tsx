@@ -14,10 +14,10 @@ const ProjectsSection = () => {
           href="https://twitter.com/_Mriganka_"
           className=" text-foreground underline decoration-customGreen underline-offset-[15px]  tracking-widest  hover:text-customGreen decoration-[3px] duration-300 ease-in-out"
         >
-          CONTACT ME
+          <p className=" text-base">CONTACT ME</p>
         </Link>
       </div>
-      <div className=" grid grid-cols-2 gap-10">
+      <div className=" grid grid-cols-2 max-tablet:grid-cols-1 gap-5">
         {projectList.map((project) => (
           <ProjectCard project={project} key={project.id} />
         ))}

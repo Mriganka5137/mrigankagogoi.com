@@ -10,7 +10,7 @@ import MobileMenu from "./MobileMenu";
 
 const NavBar = () => {
   return (
-    <div className=" max-w-screen-desktop mx-auto  px-[165px] py-9 flex justify-between max-laptop:px-[30px] relative ">
+    <div className=" max-w-screen-desktop mx-auto  px-[165px] py-9 flex justify-between max-laptop:px-[30px] relative max-tablet:px-4">
       <Link href="/" className=" z-10">
         <h3 className="">
           Mriganka <span className=" text-customGreen">gogoi</span>
