@@ -80,7 +80,7 @@
     @apply bg-background text-foreground font-spaceGrotesk;
   }
   h1 {
-    @apply text-[88px]  font-bold leading-[88px] tracking-[-2.5px] max-laptop:text-[72px] max-laptop:leading-[72px] max-laptop:tracking-[-2px] max-tablet:text-[40px] max-tablet:leading-[48px] max-tablet:tracking-[-1.5px];
+    @apply text-[88px]  font-medium leading-[88px] tracking-[-2.5px] max-laptop:text-[72px] max-laptop:leading-[72px] max-laptop:tracking-[-2px] max-tablet:text-[40px] max-tablet:leading-[48px] max-tablet:tracking-[-1.5px];
   }
   h2 {
     @apply text-[48px] font-bold leading-[56px] tracking-[-1.5px];

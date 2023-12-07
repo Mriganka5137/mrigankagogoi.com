@@ -4,8 +4,8 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <div className="border-b-[1px] border-white pb-52 mb-10 items-center gap-5">
-      <h1 className=" mt-32 max-w-3xl z-10 max-tablet:mt-10">
+    <div className="border-b-[1px] border-white pb-52 mb-10  gap-5  flex flex-col  max-tablet:items-center max-tablet:text-center max-laptop:pb-32 max-tablet:pb-24">
+      <h1 className=" mt-32 max-w-3xl z-10 max-tablet:mt-10 font-medium">
         Nice to meet you! I&apos;m{" "}
         <span className=" underline decoration-customGreen decoration-[5px] underline-offset-4">
           Mriganka Gogoi

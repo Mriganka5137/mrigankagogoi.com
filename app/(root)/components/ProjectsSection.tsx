@@ -7,7 +7,7 @@ const ProjectsSection = () => {
   return (
     <div>
       <div className=" flex justify-between items-center">
-        <h1 className=" max-laptop:text-[72px] max-tablet:text-[40px]">
+        <h1 className=" max-laptop:text-[72px] max-tablet:text-[40px] font-medium">
           Projects
         </h1>
         <Link
