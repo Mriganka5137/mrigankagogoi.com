@@ -1,5 +1,7 @@
+import { projectList } from "@/lib/constants";
 import Link from "next/link";
 import React from "react";
+import ProjectCard from "./ProjectCard";
 
 const ProjectsSection = () => {
   return (
@@ -14,6 +16,11 @@ const ProjectsSection = () => {
         >
           CONTACT ME
         </Link>
+      </div>
+      <div className=" grid grid-cols-2 gap-10">
+        {projectList.map((project) => (
+          <ProjectCard project={project} key={project.id} />
+        ))}
       </div>
     </div>
   );
