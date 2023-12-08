@@ -24,7 +24,7 @@ const Hero = () => {
       >
         CONTACT ME
       </Link>
-      <div className="brightness-50 absolute    top-32 right-[165px] max-laptop:hidden overflow-hidden rounded-full ">
+      <div className="brightness-50 absolute    top-32 right-[165px] max-[1300px]:hidden overflow-hidden rounded-full ">
         <Image
           src={HeroImage}
           alt="hero Image"
