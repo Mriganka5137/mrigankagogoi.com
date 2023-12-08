@@ -41,9 +41,12 @@ const ProjectCard = ({ project }: Props) => {
       <CardFooter className="  flex justify-between items-start pb-5 pt-2 flex-wrap gap-5">
         <div className=" flex flex-col gap-3">
           <h4 className=" text-lg uppercase">{project.label}</h4>
-          <div className=" flex gap-5 uppercase">
+          <div className=" flex gap-5 uppercase flex-wrap">
             {project.tech.map((ele, i) => (
-              <p className=" text-sm text-customGreen" key={i}>
+              <p
+                className=" text-sm text-customGreen max-tablet:text-xs"
+                key={i}
+              >
                 {ele}
               </p>
             ))}
