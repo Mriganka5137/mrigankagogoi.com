@@ -28,7 +28,7 @@ const ProjectCard = ({ project }: Props) => {
             height={600}
             className="object-contain"
           />
-          <div className=" h-full w-full absolute bg-customDarkGrey top-0 hover:opacity-90 uppercase flex flex-col justify-center items-center gap-10 underline decoration-customGreen decoration-2 underline-offset-8 opacity-0 cursor-pointer duration-500 max-tablet:hidden">
+          <div className=" h-full w-full absolute bg-customDarkGrey top-0 hover:opacity-80 uppercase flex flex-col justify-center items-center gap-10 underline decoration-customGreen decoration-2 underline-offset-8 opacity-0 cursor-pointer duration-500 max-tablet:hidden">
             <Link href={project.live_link} target="_blank">
               View Project
             </Link>
@@ -38,7 +38,7 @@ const ProjectCard = ({ project }: Props) => {
           </div>
         </div>
       </CardContent>
-      <CardFooter className="  flex justify-between items-start pb-5 pt-2 flex-wrap gap-5">
+      <CardFooter className="flex justify-between items-start pb-5 pt-2 flex-wrap gap-5">
         <div className=" flex flex-col gap-3">
           <h4 className=" text-lg uppercase">{project.label}</h4>
           <div className=" flex gap-5 uppercase flex-wrap">

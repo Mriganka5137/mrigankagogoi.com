@@ -91,4 +91,7 @@
   p {
     @apply text-[18px] leading-[28px] text-customGrey;
   }
+  svg {
+    @apply hover:fill-customGreen;
+  }
 }

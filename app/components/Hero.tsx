@@ -1,4 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
+import HeroImage from "@/public/assets/images/profile2.jpeg";
 
 const Hero = () => {
   return (
@@ -22,6 +24,14 @@ const Hero = () => {
       >
         CONTACT ME
       </Link>
+      <div className="brightness-50 absolute    top-32 right-[165px] max-laptop:hidden overflow-hidden rounded-full ">
+        <Image
+          src={HeroImage}
+          alt="hero Image"
+          className=" w-[380px] h-[380px] opacity-60 object-cover rounded-full  hover:opacity-100 cursor-move duration-500 hover:scale-110 
+          "
+        />
+      </div>
     </div>
   );
 };

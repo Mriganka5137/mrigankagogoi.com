@@ -1,5 +1,4 @@
 import { socialLinks } from "@/lib/constants";
-import HeroImage from "@/public/assets/images/profile2.jpeg";
 import Image from "next/image";
 import Link from "next/link";
 import MobileMenu from "./MobileMenu";
@@ -13,25 +12,25 @@ const NavBar = () => {
         </h3>
       </Link>
       <div className=" flex justify-between gap-7 z-10 max-tablet:hidden">
+        <Link
+          href="/blog"
+          className=" text-customGrey hover:text-customGreen  duration-300"
+        >
+          Blog
+        </Link>
         {socialLinks.map((social) => (
-          <Link href={social.href} key={social.id} target="_blank">
+          <Link href={social.href} key={social.id} target="_blank" className="">
             <Image
               src={social.img_url}
               alt={social.label}
               width={25}
               height={25}
+              className=""
             />
           </Link>
         ))}
       </div>
       <MobileMenu />
-      <div className=" brightness-50 absolute top-32 right-[165px] max-laptop:hidden ">
-        <Image
-          src={HeroImage}
-          alt="hero Image"
-          className=" w-[380px] h-[600px] opacity-75 "
-        />
-      </div>
     </div>
   );
 };
