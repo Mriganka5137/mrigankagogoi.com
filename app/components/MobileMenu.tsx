@@ -24,7 +24,12 @@ const MobileMenu = () => {
       </SheetTrigger>
       <SheetContent className=" w-20">
         <div className=" flex flex-col gap-5 justify-center items-center">
-          <p className=" mt-5 text-customGreen text-sm ">Connect</p>
+          <Link
+            href="/blog"
+            className=" mt-5 text-customGrey hover:text-customGreen  duration-300"
+          >
+            Blog
+          </Link>
           {socialLinks.map((social) => (
             <Link href={social.href} key={social.id} target="_blank">
               <Image
