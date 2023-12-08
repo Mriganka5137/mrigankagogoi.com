@@ -26,11 +26,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark text-foreground bg-background">
-      <body
-        className={
-          (cn("font-spaceGrotesk"), poppins.variable, spaceGrotesk.variable)
-        }
-      >
+      <body className={(cn("font-spaceGrotesk"), spaceGrotesk.variable)}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
