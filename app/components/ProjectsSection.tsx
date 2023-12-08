@@ -12,9 +12,12 @@ const ProjectsSection = () => {
         </h1>
         <Link
           href="https://twitter.com/_Mriganka_"
+          target="_blank"
           className=" text-foreground underline decoration-customGreen underline-offset-[15px]  tracking-widest  hover:text-customGreen decoration-[3px] duration-300 ease-in-out"
         >
-          <p className=" text-base">CONTACT ME</p>
+          <p className=" text-base hover:text-customGreen duration-500">
+            CONTACT ME
+          </p>
         </Link>
       </div>
       <div className=" grid grid-cols-2 max-tablet:grid-cols-1 gap-5">

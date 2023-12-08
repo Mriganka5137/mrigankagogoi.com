@@ -29,8 +29,12 @@ const ProjectCard = ({ project }: Props) => {
             className="object-contain"
           />
           <div className=" h-full w-full absolute bg-customDarkGrey top-0 hover:opacity-90 uppercase flex flex-col justify-center items-center gap-10 underline decoration-customGreen decoration-2 underline-offset-8 opacity-0 cursor-pointer duration-500 max-tablet:hidden">
-            <Link href={project.live_link}>View Project</Link>
-            <Link href={project.github_link}>View Code</Link>
+            <Link href={project.live_link} target="_blank">
+              View Project
+            </Link>
+            <Link href={project.github_link} target="_blank">
+              View Code
+            </Link>
           </div>
         </div>
       </CardContent>
@@ -46,8 +50,12 @@ const ProjectCard = ({ project }: Props) => {
           </div>
         </div>
         <div className="tablet:hidden uppercase flex gap-5   underline decoration-customGreen underline-offset-8 decoration-2">
-          <Link href={project.live_link}>View Project</Link>
-          <Link href={project.github_link}>View Code</Link>
+          <Link href={project.live_link} target="_blank">
+            View Project
+          </Link>
+          <Link href={project.github_link} target="_blank">
+            View Code
+          </Link>
         </div>
       </CardFooter>
     </Card>
