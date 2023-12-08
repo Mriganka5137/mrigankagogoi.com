@@ -1,6 +1,4 @@
-import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 
 const Hero = () => {
   return (
@@ -19,6 +17,7 @@ const Hero = () => {
 
       <Link
         href="https://twitter.com/_Mriganka_"
+        target="_blank"
         className=" text-foreground underline decoration-customGreen underline-offset-[15px]  tracking-widest  hover:text-customGreen decoration-[3px] duration-300 ease-in-out"
       >
         CONTACT ME

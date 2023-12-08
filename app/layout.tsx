@@ -6,13 +6,21 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { cn } from "@/lib/utils";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
-
+import { Poppins } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
+
 export const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   variable: "--font-spaceGrotesk",
   display: "swap",
 });
+
+export const poppins = Poppins({
+  weight: ["300", "400", "500", "600", "700"],
+  subsets: ["latin"],
+  variable: "--font--poppins",
+});
+
 export const metadata: Metadata = {
   title: "Mriganka Gogoi",
   description: "Portfolio | Mriganka Mousum Gogoi | Full Stack Developer",
@@ -25,7 +33,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark text-foreground bg-background">
-      <body className={(cn("font-spaceGrotesk"), spaceGrotesk.variable)}>
+      <body
+        className={
+          (cn("font-spaceGrotesk"), poppins.variable, spaceGrotesk.variable)
+        }
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
