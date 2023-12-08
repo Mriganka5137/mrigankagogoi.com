@@ -2,6 +2,7 @@ import { socialLinks } from "@/lib/constants";
 import Image from "next/image";
 import Link from "next/link";
 import MobileMenu from "./MobileMenu";
+import { ModeToggle } from "@/components/theme-toggle";
 
 const NavBar = () => {
   return (
@@ -11,13 +12,14 @@ const NavBar = () => {
           Mriganka <span className=" text-customGreen">gogoi</span>
         </h3>
       </Link>
-      <div className=" flex justify-between gap-7 z-10 max-tablet:hidden">
+      <div className=" flex justify-between gap-7 z-10 max-tablet:hidden items-center">
         <Link
           href="/blog"
           className=" text-customGrey hover:text-customGreen  duration-300"
         >
           Blog
         </Link>
+        <ModeToggle />
         {socialLinks.map((social) => (
           <Link href={social.href} key={social.id} target="_blank" className="">
             <Image
