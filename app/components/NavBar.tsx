@@ -1,11 +1,7 @@
+import { socialLinks } from "@/lib/constants";
+import HeroImage from "@/public/assets/images/profile2.jpeg";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
-import github from "@/public/assets/images/icon-github.svg";
-import frontendMentor from "@/public/assets/images/icon-frontend-mentor.svg";
-import linkedin from "@/public/assets/images/icon-linkedin.svg";
-import twitter from "@/public/assets/images/icon-twitter.svg";
-import HeroImage from "@/public/assets/images/profile2.jpeg";
 import MobileMenu from "./MobileMenu";
 
 const NavBar = () => {
@@ -17,29 +13,16 @@ const NavBar = () => {
         </h3>
       </Link>
       <div className=" flex justify-between gap-7 z-10 max-tablet:hidden">
-        <Link href="https://github.com/Mriganka5137">
-          <Image
-            src={github}
-            width={25}
-            height={25}
-            alt="github"
-            className=""
-          />
-        </Link>
-        <Link href="https://github.com/Mriganka5137">
-          <Image
-            src={frontendMentor}
-            width={25}
-            height={25}
-            alt="frontend mentor"
-          />
-        </Link>
-        <Link href="https://github.com/Mriganka5137">
-          <Image src={linkedin} width={25} height={25} alt="linkedin" />
-        </Link>
-        <Link href="https://github.com/Mriganka5137">
-          <Image src={twitter} width={25} height={25} alt="twitter" />
-        </Link>
+        {socialLinks.map((social) => (
+          <Link href={social.href} key={social.id} target="_blank">
+            <Image
+              src={social.img_url}
+              alt={social.label}
+              width={25}
+              height={25}
+            />
+          </Link>
+        ))}
       </div>
       <MobileMenu />
       <div className=" brightness-50 absolute top-32 right-[165px] max-laptop:hidden ">

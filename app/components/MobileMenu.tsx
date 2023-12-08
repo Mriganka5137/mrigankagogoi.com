@@ -1,11 +1,7 @@
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { socialLinks } from "@/lib/constants";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
-import github from "@/public/assets/images/icon-github.svg";
-import frontendMentor from "@/public/assets/images/icon-frontend-mentor.svg";
-import linkedin from "@/public/assets/images/icon-linkedin.svg";
-import twitter from "@/public/assets/images/icon-twitter.svg";
 
 const MobileMenu = () => {
   return (
@@ -26,32 +22,19 @@ const MobileMenu = () => {
           />
         </svg>
       </SheetTrigger>
-      <SheetContent className=" w-32">
+      <SheetContent className=" w-20">
         <div className=" flex flex-col gap-5 justify-center items-center">
-          <p className=" mt-5 text-customGreen ">Connect</p>
-          <Link href="https://github.com/Mriganka5137">
-            <Image
-              src={github}
-              width={25}
-              height={25}
-              alt="github"
-              className=""
-            />
-          </Link>
-          <Link href="https://github.com/Mriganka5137">
-            <Image
-              src={frontendMentor}
-              width={25}
-              height={25}
-              alt="frontend mentor"
-            />
-          </Link>
-          <Link href="https://github.com/Mriganka5137">
-            <Image src={linkedin} width={25} height={25} alt="linkedin" />
-          </Link>
-          <Link href="https://github.com/Mriganka5137">
-            <Image src={twitter} width={25} height={25} alt="twitter" />
-          </Link>
+          <p className=" mt-5 text-customGreen text-sm ">Connect</p>
+          {socialLinks.map((social) => (
+            <Link href={social.href} key={social.id} target="_blank">
+              <Image
+                src={social.img_url}
+                alt={social.label}
+                width={25}
+                height={25}
+              />
+            </Link>
+          ))}
         </div>
       </SheetContent>
     </Sheet>

@@ -12,8 +12,9 @@ const Hero = () => {
         </span>
       </h1>
       <p className=" max-w-md mt-11 mb-16">
-        Based in the India, I’m a Full Stack developer passionate about building
-        accessible web apps that users love.
+        In the heart of India, I thrive as a Full Stack developer, channeling my
+        passion into the creation of web applications that prioritize
+        accessibility and are designed to be cherished by users.
       </p>
 
       <Link

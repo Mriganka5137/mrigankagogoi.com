@@ -81,3 +81,30 @@ export const projectList = [
     tech: ["html", "css", "React", "Tailwind"],
   },
 ];
+
+export const socialLinks = [
+  {
+    id: 1,
+    label: "github",
+    href: "https://github.com/Mriganka5137",
+    img_url: "/assets/images/icon-github.svg",
+  },
+  {
+    id: 2,
+    label: "frontend mentor",
+    href: "https://www.frontendmentor.io/profile/Mriganka5137",
+    img_url: "/assets/images/icon-frontend-mentor.svg",
+  },
+  {
+    id: 3,
+    label: "linkedin",
+    href: "https://www.linkedin.com/in/mriganka-gogoi/",
+    img_url: "/assets/images/icon-linkedin.svg",
+  },
+  {
+    id: 4,
+    label: "twitter",
+    href: "https://twitter.com/_Mriganka_",
+    img_url: "/assets/images/icon-twitter.svg",
+  },
+];
