@@ -20,11 +20,11 @@ const Hero = () => {
       <Link
         href="https://twitter.com/_Mriganka_"
         target="_blank"
-        className=" text-foreground underline decoration-customGreen underline-offset-[15px]  tracking-widest  hover:text-customGreen decoration-[3px] duration-300 ease-in-out"
+        className=" text-foreground underline decoration-customGreen underline-offset-[15px]  tracking-widest  hover:text-customGreen decoration-[3px] duration-300 ease-in-out w-fit"
       >
         CONTACT ME
       </Link>
-      <div className="brightness-50 absolute    top-32 right-[165px] max-[1300px]:hidden overflow-hidden rounded-full ">
+      <div className="brightness-50 absolute top-32 right-[165px] max-[1300px]:hidden overflow-hidden rounded-full ">
         <Image
           src={HeroImage}
           alt="hero Image"

@@ -13,13 +13,13 @@ const NavBar = () => {
         </h3>
       </Link>
       <div className=" flex justify-between gap-7 z-10 max-tablet:hidden items-center">
-        <Link
+        {/* <Link
           href="/blog"
           className=" text-customGrey hover:text-customGreen  duration-300"
         >
           Blog
-        </Link>
-        <ModeToggle />
+        </Link> */}
+        {/* <ModeToggle /> */}
         {socialLinks.map((social) => (
           <Link href={social.href} key={social.id} target="_blank" className="">
             <Image

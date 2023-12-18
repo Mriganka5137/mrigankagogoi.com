@@ -93,5 +93,5 @@ module.exports = {
       // => @media (min-width: 1280px) { ... }
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), require("daisyui")],
 };
