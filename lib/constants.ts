@@ -65,6 +65,17 @@ export const projectList = [
       "https://github.com/Mriganka5137/Namaste-React/tree/main/namaste-zomato",
     tech: ["React", "JavaScript", "API", "Tailwind CSS"],
   },
+  {
+    id: 5,
+    label: "Dribble Clone",
+    // img_url: "/assets/images/namaste_zomato.png",
+    video_src: "/assets/dribble.mov",
+    live_link:
+      "https://frontend-domination-css-projects-mriganka5137.vercel.app/dribble",
+    github_link:
+      "https://github.com/Mriganka5137/Frontend-Domination/tree/main/css-projects/app/(projects)/dribble",
+    tech: ["Next.js", "HTML", "React", "Tailwind CSS"],
+  },
 ];
 
 export const socialLinks = [

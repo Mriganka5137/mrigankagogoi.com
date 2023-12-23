@@ -10,24 +10,37 @@ interface Props {
 interface Project {
   id: number;
   label: string;
-  img_url: string;
+  img_url?: string;
   live_link: string;
   github_link: string;
   tech: string[];
+  video_src?: string;
 }
 
 const ProjectCard = ({ project }: Props) => {
   return (
     <Card className=" mt-16">
-      <CardContent className=" p-5">
+      <CardContent className="p-5">
         <div className="relative">
-          <Image
-            src={project.img_url}
-            alt={project.label}
-            width={600}
-            height={600}
-            className="object-contain"
-          />
+          {project.img_url ? (
+            <Image
+              src={project.img_url || "/images/placeholder.png"}
+              alt={project.label}
+              width={600}
+              height={600}
+              className="object-contain"
+            />
+          ) : (
+            <video
+              src={project.video_src}
+              autoPlay
+              muted
+              loop
+              height={600}
+              width={600}
+              className="object-contain"
+            />
+          )}
           <div className=" h-full w-full absolute bg-customDarkGrey top-0 hover:opacity-80 uppercase flex flex-col justify-center items-center gap-10 underline decoration-customGreen decoration-2 underline-offset-8 opacity-0 cursor-pointer duration-500 max-tablet:hidden">
             <Link href={project.live_link} target="_blank">
               View Project
