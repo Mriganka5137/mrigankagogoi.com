@@ -18,7 +18,7 @@ interface Project {
 
 const ProjectCard = ({ project }: Props) => {
   return (
-    <Card className=" w-full tablet:w-[400px] flex flex-col items-center gap-3 overflow-hidden p-5 bg-secondary justify-between">
+    <Card className=" w-full tablet:w-[400px] flex flex-col items-center gap-3 overflow-hidden p-5 bg-secondary justify-between  hover:border-customGreen transition-all duration-500 ease-in-out">
       <CardContent className="relative w-full h-[300px]  overflow-hidden">
         <Image
           src={project.img_url}

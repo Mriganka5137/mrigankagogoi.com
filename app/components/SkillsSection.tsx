@@ -8,7 +8,7 @@ const SkillsSection = () => {
     "
     >
       {skills.map((skill) => (
-        <div key={skill.id} className="">
+        <div key={skill.id} className="skill">
           <h2 className=" max-tablet:text-[32px] font-medium">{skill.label}</h2>
           <p className=" max-tablet:text-sm text-customGrey">
             {skill.experience} Years Experience
