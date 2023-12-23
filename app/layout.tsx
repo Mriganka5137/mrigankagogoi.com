@@ -25,8 +25,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="dark text-foreground bg-background">
-      <body className={(cn("font-spaceGrotesk"), spaceGrotesk.variable)}>
+    <html
+      lang="en"
+      className="dark text-foreground bg-background selection:bg-customGreen selection:text-white"
+    >
+      <body className={(cn("font-spaceGrotesk "), spaceGrotesk.variable)}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
