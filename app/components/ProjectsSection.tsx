@@ -20,7 +20,7 @@ const ProjectsSection = () => {
           </p>
         </Link>
       </div>
-      <div className=" grid grid-cols-2 max-tablet:grid-cols-1 gap-5">
+      <div className=" flex flex-col tablet:flex-row flex-wrap gap-10 items-center justify-center p-2 mt-20">
         {projectList.map((project) => (
           <ProjectCard project={project} key={project.id} />
         ))}

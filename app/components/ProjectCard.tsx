@@ -10,51 +10,36 @@ interface Props {
 interface Project {
   id: number;
   label: string;
-  img_url?: string;
+  img_url: string;
   live_link: string;
   github_link: string;
   tech: string[];
-  video_src?: string;
 }
 
 const ProjectCard = ({ project }: Props) => {
   return (
-    <Card className=" mt-16">
-      <CardContent className="p-5">
-        <div className="relative">
-          {project.img_url ? (
-            <Image
-              src={project.img_url || "/images/placeholder.png"}
-              alt={project.label}
-              width={600}
-              height={600}
-              className="object-contain"
-            />
-          ) : (
-            <video
-              src={project.video_src}
-              autoPlay
-              muted
-              loop
-              height={600}
-              width={600}
-              className="object-contain"
-            />
-          )}
-          <div className=" h-full w-full absolute bg-customDarkGrey top-0 hover:opacity-80 uppercase flex flex-col justify-center items-center gap-10 underline decoration-customGreen decoration-2 underline-offset-8 opacity-0 cursor-pointer duration-500 max-tablet:hidden">
-            <Link href={project.live_link} target="_blank">
-              View Project
-            </Link>
-            <Link href={project.github_link} target="_blank">
-              View Code
-            </Link>
-          </div>
+    <Card className=" w-full tablet:w-[400px] flex flex-col items-center gap-3 overflow-hidden p-5 bg-secondary justify-between  hover:border-customGreen transition-all duration-500 ease-in-out">
+      <CardContent className="relative w-full h-[300px]  overflow-hidden">
+        <Image
+          src={project.img_url}
+          alt={project.label}
+          fill
+          className=" h-full w-full object-cover rounded-md "
+        />
+
+        <div className=" h-full w-full absolute bg-customDarkGrey top-0 left-0 hover:opacity-80 uppercase flex flex-col justify-center items-center gap-10 underline decoration-customGreen decoration-2 underline-offset-8 opacity-0 cursor-pointer duration-500 max-tablet:hidden">
+          <Link href={project.live_link} target="_blank">
+            View Project
+          </Link>
+          <Link href={project.github_link} target="_blank">
+            View Code
+          </Link>
         </div>
       </CardContent>
-      <CardFooter className="flex justify-between items-start pb-5 pt-2 flex-wrap gap-5">
+      <CardFooter className="flex flex-col justify-start items-start  gap-5  p-2 w-full min-h-[100px] max-h-fit">
         <div className=" flex flex-col gap-3">
           <h4 className=" text-lg uppercase">{project.label}</h4>
-          <div className=" flex gap-5 uppercase flex-wrap">
+          <div className="  uppercase flex justify-between gap-5">
             {project.tech.map((ele, i) => (
               <p
                 className=" text-sm text-customGreen max-tablet:text-xs"

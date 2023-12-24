@@ -38,7 +38,7 @@ export const projectList = [
     img_url: "/assets/images/devflow.png",
     live_link: "https://devflow-drab.vercel.app/",
     github_link: "https://github.com/Mriganka5137/Devflow",
-    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "MongoDB"],
+    tech: ["Next.js", "TypeScript", "MongoDB"],
   },
   {
     id: 2,
@@ -46,7 +46,7 @@ export const projectList = [
     img_url: "/assets/images/issue_tracker.png",
     live_link: "https://issue-tracker-mriganka5137.vercel.app/",
     github_link: "https://github.com/Mriganka5137/issue-tracker",
-    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "MYSQL"],
+    tech: ["Next.js", "TypeScript", "MYSQL"],
   },
   {
     id: 3,
@@ -54,7 +54,7 @@ export const projectList = [
     img_url: "/assets/images/game_hub.png",
     live_link: "https://game-hub-mriganka5137.vercel.app/",
     github_link: "https://github.com/Mriganka5137/game-hub",
-    tech: ["React", "React Query", "TypeScript", "Tailwind", "API"],
+    tech: ["React", "React Query", "TypeScript"],
   },
   {
     id: 4,
@@ -63,18 +63,17 @@ export const projectList = [
     live_link: "https://namaste-react-mriganka5137.vercel.app/",
     github_link:
       "https://github.com/Mriganka5137/Namaste-React/tree/main/namaste-zomato",
-    tech: ["React", "JavaScript", "API", "Tailwind CSS"],
+    tech: ["React", "JavaScript", "Tailwind CSS"],
   },
   {
     id: 5,
     label: "Dribble Clone",
-    // img_url: "/assets/images/namaste_zomato.png",
-    video_src: "/assets/dribble.mov",
+    img_url: "/assets/images/dribble.png",
     live_link:
       "https://frontend-domination-css-projects-mriganka5137.vercel.app/dribble",
     github_link:
       "https://github.com/Mriganka5137/Frontend-Domination/tree/main/css-projects/app/(projects)/dribble",
-    tech: ["Next.js", "HTML", "React", "Tailwind CSS"],
+    tech: ["Next.js", "React", "Tailwind CSS"],
   },
 ];
 

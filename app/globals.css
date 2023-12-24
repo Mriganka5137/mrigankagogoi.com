@@ -92,3 +92,55 @@
     @apply text-[18px] leading-[28px] text-customGrey;
   }
 }
+
+.skill h2 {
+  @apply cursor-pointer hover:underline;
+}
+
+.logo:hover {
+  animation-name: logo-effect;
+  animation-duration: 500ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.nav-icons:hover {
+  animation-name: logo-effect;
+  animation-duration: 500ms;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes logo-effect {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.skill h2:hover {
+  @apply text-customGreen;
+  animation-name: hover-effect;
+  animation-duration: 300ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes hover-effect {
+  0% {
+    transform: translateY(0);
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateY(-5px);
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateY(0);
+    transform: translateX(0);
+  }
+}
