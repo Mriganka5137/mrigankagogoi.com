@@ -21,7 +21,7 @@ const ProjectCard = ({ project }: Props) => {
   return (
     <Card
       className=" flex items-start
-       gap-3 overflow-hidden bg-slate-100 dark:bg-stone-950   hover:border-customGreen transition-all duration-500 ease-in-out w-full max-tablet:flex-col hover:translate-x-2 p-5 max-h-96 h-96 shadow-lg "
+       gap-3 overflow-hidden bg-slate-100 dark:bg-stone-950   hover:border-customGreen transition-all duration-500 ease-in-out w-full max-tablet:flex-col hover:translate-x-2 p-5 max-h-96 h-96"
       id="card"
     >
       <CardContent className="relative w-full h-[300px]  overflow-hidden ">
