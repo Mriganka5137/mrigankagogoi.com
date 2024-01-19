@@ -19,10 +19,10 @@ const NavBar = () => {
         {/* <Link
           href="/blog"
           className=" text-customGrey hover:text-customGreen  duration-300"
-        >
+          >
           Blog
         </Link> */}
-        <ModeToggle />
+        {/* <ModeToggle /> */}
         {socialLinks.map((social) => (
           <Link href={social.href} key={social.id} target="_blank" className="">
             <Image

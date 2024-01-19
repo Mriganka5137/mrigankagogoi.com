@@ -21,7 +21,7 @@ const ProjectCard = ({ project }: Props) => {
   return (
     <Card
       className=" flex items-start
-       gap-3 overflow-hidden bg-slate-100 dark:bg-stone-950   hover:border-customGreen transition-all duration-500 ease-in-out w-full max-tablet:flex-col hover:translate-x-2 p-5 max-h-96 h-96"
+       gap-3 overflow-hidden bg-zinc-100 dark:bg-stone-950   hover:border-customGreen transition-all duration-500 ease-in-out w-full max-tablet:flex-col hover:translate-x-2 p-5 min-h-96 shadow-md"
       id="card"
     >
       <CardContent className="relative w-full h-[300px]  overflow-hidden ">
@@ -45,7 +45,7 @@ const ProjectCard = ({ project }: Props) => {
           </Link>
         </div>
       </CardContent>
-      <CardFooter className="flex flex-col w-full   items-start  justify-between h-full">
+      <CardFooter className="flex flex-col w-full   items-start  justify-between h-full  gap-5">
         <div className=" flex flex-col gap-3">
           <h4 className=" text-2xl uppercase">{project.label}</h4>
           <div className="  uppercase flex gap-5">
