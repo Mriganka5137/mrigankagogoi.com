@@ -60,7 +60,10 @@ const ProjectCard = ({ project }: Props) => {
           </div>
           {project.details &&
             project.details.map((ele, i) => (
-              <p className=" text-sm max-tablet:text-xs max-tablet:hidden">
+              <p
+                className=" text-sm max-tablet:text-xs max-tablet:hidden"
+                key={i}
+              >
                 {ele}
               </p>
             ))}
