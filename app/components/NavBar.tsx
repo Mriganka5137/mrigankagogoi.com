@@ -22,7 +22,7 @@ const NavBar = () => {
         >
           Blog
         </Link> */}
-        {/* <ModeToggle /> */}
+        <ModeToggle />
         {socialLinks.map((social) => (
           <Link href={social.href} key={social.id} target="_blank" className="">
             <Image

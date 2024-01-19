@@ -21,7 +21,7 @@ const ProjectCard = ({ project }: Props) => {
   return (
     <Card
       className=" flex items-start
-       gap-3 overflow-hidden  bg-stone-950   hover:border-customGreen transition-all duration-500 ease-in-out w-full max-tablet:flex-col hover:translate-x-2 p-5 max-h-96 h-96"
+       gap-3 overflow-hidden bg-slate-100 dark:bg-stone-950   hover:border-customGreen transition-all duration-500 ease-in-out w-full max-tablet:flex-col hover:translate-x-2 p-5 max-h-96 h-96 shadow-lg "
       id="card"
     >
       <CardContent className="relative w-full h-[300px]  overflow-hidden ">
@@ -32,11 +32,15 @@ const ProjectCard = ({ project }: Props) => {
           className=" h-full w-full object-cover rounded-md "
         />
 
-        <div className=" h-full w-full absolute bg-customDarkGrey top-0 left-0 hover:opacity-80 uppercase flex flex-col justify-center items-center gap-10 underline decoration-customGreen decoration-2 underline-offset-8 opacity-0 cursor-pointer duration-500 max-tablet:hidden">
-          <Link href={project.live_link} target="_blank">
+        <div className=" h-full w-full absolute bg-zinc-700  top-0 left-0 hover:opacity-80 uppercase flex flex-col justify-center items-center gap-10 underline decoration-customGreen decoration-2 underline-offset-8 opacity-0 cursor-pointer duration-500 max-tablet:hidden">
+          <Link href={project.live_link} target="_blank" className="text-white">
             View Project
           </Link>
-          <Link href={project.github_link} target="_blank">
+          <Link
+            href={project.github_link}
+            target="_blank"
+            className="text-white"
+          >
             View Code
           </Link>
         </div>
