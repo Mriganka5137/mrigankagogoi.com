@@ -6,6 +6,7 @@ const SkillsSection = () => {
       className=" grid gap-24  grid-cols-3 max-tablet:grid-cols-2 max-mobile:grid-cols-1 max-mobile:gap-6  mb-[140px]
     justify-items-center
     "
+      id="skills"
     >
       {skills.map((skill) => (
         <div key={skill.id} className="skill">

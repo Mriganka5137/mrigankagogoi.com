@@ -4,8 +4,15 @@ import HeroImage from "@/public/assets/images/profile2.jpeg";
 
 const Hero = () => {
   return (
-    <div className="border-b-[1px] border-white pb-52 mb-10  gap-5  flex flex-col  max-tablet:items-center max-tablet:text-center max-laptop:pb-32 max-tablet:pb-24">
-      <h1 className=" mt-32 max-w-3xl z-10 max-tablet:mt-10 font-medium">
+    <div
+      className="border-b-[1px] border-white pb-52 mb-10  gap-5  flex flex-col  max-tablet:items-center max-tablet:text-center max-laptop:pb-32 max-tablet:pb-24 "
+      id="hero"
+    >
+      <h1
+        className=" mt-32 max-w-3xl z-10 max-tablet:mt-10 font-medium"
+        data-scroll
+        data-scroll-speed="0.9"
+      >
         Nice to meet you! I&apos;m{" "}
         <span className=" underline decoration-customGreen decoration-[5px] underline-offset-4">
           Mriganka Gogoi
@@ -24,14 +31,18 @@ const Hero = () => {
       >
         CONTACT ME
       </Link>
-      <div className="brightness-50 absolute top-32 right-[165px] max-[1300px]:hidden overflow-hidden rounded-full ">
+      {/* <div
+        className="brightness-50 absolute top-32 right-[165px] max-[1300px]:hidden overflow-hidden rounded-full "
+        data-scroll
+        data-scroll-speed="0.3"
+      >
         <Image
           src={HeroImage}
           alt="hero Image"
           className=" w-[380px] h-[380px] opacity-60 object-cover rounded-full  hover:opacity-100 cursor-move duration-500 hover:scale-110 
           "
         />
-      </div>
+      </div> */}
     </div>
   );
 };

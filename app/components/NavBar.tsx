@@ -6,7 +6,10 @@ import { ModeToggle } from "@/components/theme-toggle";
 
 const NavBar = () => {
   return (
-    <div className=" max-w-screen-desktop mx-auto  px-[165px] py-9 flex justify-between max-laptop:px-[30px] relative max-tablet:px-4">
+    <div
+      className=" max-w-screen-desktop mx-auto  px-[165px] py-9 flex justify-between max-laptop:px-[30px] relative max-tablet:px-4"
+      id="navbar"
+    >
       <Link href="/" className=" z-10">
         <h3 className="logo">
           Mriganka <span className=" text-customGreen">gogoi</span>
@@ -16,7 +19,7 @@ const NavBar = () => {
         {/* <Link
           href="/blog"
           className=" text-customGrey hover:text-customGreen  duration-300"
-        >
+          >
           Blog
         </Link> */}
         {/* <ModeToggle /> */}

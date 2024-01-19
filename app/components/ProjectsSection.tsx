@@ -5,7 +5,7 @@ import ProjectCard from "./ProjectCard";
 
 const ProjectsSection = () => {
   return (
-    <div>
+    <>
       <div className=" flex justify-between items-center">
         <h1 className=" max-laptop:text-[72px] max-tablet:text-[40px] font-medium">
           Projects
@@ -20,12 +20,15 @@ const ProjectsSection = () => {
           </p>
         </Link>
       </div>
-      <div className=" flex flex-col tablet:flex-row flex-wrap gap-10 items-center justify-center p-2 mt-20">
+      <div
+        className=" flex  gap-10 items-center mt-20  flex-col justify-center"
+        id="projects"
+      >
         {projectList.map((project) => (
           <ProjectCard project={project} key={project.id} />
         ))}
       </div>
-    </div>
+    </>
   );
 };
 
