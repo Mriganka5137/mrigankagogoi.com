@@ -14,12 +14,17 @@ interface Project {
   live_link: string;
   github_link: string;
   tech: string[];
+  details: string[];
 }
 
 const ProjectCard = ({ project }: Props) => {
   return (
-    <Card className=" w-full tablet:w-[400px] flex flex-col items-center gap-3 overflow-hidden p-5 bg-secondary justify-between  hover:border-customGreen transition-all duration-500 ease-in-out">
-      <CardContent className="relative w-full h-[300px]  overflow-hidden">
+    <Card
+      className=" flex items-start
+       gap-3 overflow-hidden  bg-stone-950   hover:border-customGreen transition-all duration-500 ease-in-out w-full max-tablet:flex-col hover:translate-x-2 p-5 max-h-96 h-96"
+      id="card"
+    >
+      <CardContent className="relative w-full h-[300px]  overflow-hidden ">
         <Image
           src={project.img_url}
           alt={project.label}
@@ -36,10 +41,10 @@ const ProjectCard = ({ project }: Props) => {
           </Link>
         </div>
       </CardContent>
-      <CardFooter className="flex flex-col justify-start items-start  gap-5  p-2 w-full min-h-[100px] max-h-fit">
+      <CardFooter className="flex flex-col w-full   items-start  justify-between h-full">
         <div className=" flex flex-col gap-3">
-          <h4 className=" text-lg uppercase">{project.label}</h4>
-          <div className="  uppercase flex justify-between gap-5">
+          <h4 className=" text-2xl uppercase">{project.label}</h4>
+          <div className="  uppercase flex gap-5">
             {project.tech.map((ele, i) => (
               <p
                 className=" text-sm text-customGreen max-tablet:text-xs"
@@ -49,12 +54,18 @@ const ProjectCard = ({ project }: Props) => {
               </p>
             ))}
           </div>
+          {project.details &&
+            project.details.map((ele, i) => (
+              <p className=" text-sm max-tablet:text-xs max-tablet:hidden">
+                {ele}
+              </p>
+            ))}
         </div>
-        <div className="tablet:hidden uppercase flex gap-5   underline decoration-customGreen underline-offset-8 decoration-2">
-          <Link href={project.live_link} target="_blank">
+        <div className=" uppercase flex gap-5  underline decoration-customGreen underline-offset-8 decoration-2">
+          <Link href={project.live_link} target="_blank" className="">
             View Project
           </Link>
-          <Link href={project.github_link} target="_blank">
+          <Link href={project.github_link} target="_blank" className="">
             View Code
           </Link>
         </div>
