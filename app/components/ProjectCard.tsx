@@ -21,7 +21,7 @@ const ProjectCard = ({ project }: Props) => {
   return (
     <Card
       className=" flex items-start
-       gap-3 overflow-hidden bg-zinc-100 dark:bg-stone-950   hover:border-customGreen transition-all duration-500 ease-in-out w-full max-tablet:flex-col hover:translate-x-2 p-5 min-h-96 shadow-md"
+       gap-3 overflow-hidden bg-zinc-100 dark:bg-stone-950   hover:border-customGreen transition-all duration-500 ease-in-out w-full max-tablet:flex-col hover:translate-x-2 p-5 min-h-96 shadow-md max-mobile:p-2"
       id="card"
     >
       <CardContent className="relative w-full h-[300px]  overflow-hidden ">
@@ -61,7 +61,7 @@ const ProjectCard = ({ project }: Props) => {
           {project.details &&
             project.details.map((ele, i) => (
               <p
-                className=" text-sm max-tablet:text-xs max-tablet:hidden"
+                className=" text-sm max-tablet:text-xs max-tablet:hidden text-gray-400"
                 key={i}
               >
                 {ele}
