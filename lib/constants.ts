@@ -68,19 +68,18 @@ export const projectList = [
       "Implemented client-side caching and incorporated infinite scrolling functionalities using React Query, optimizing the application for seamless and efficient user interactions.",
     ],
   },
-  // {
-  //   id: 4,
-  //   label: "Namaste Zomato",
-  //   img_url: "/assets/images/namaste_zomato.png",
-  //   live_link: "https://namaste-react-mriganka5137.vercel.app/",
-  //   github_link:
-  //     "https://github.com/Mriganka5137/Namaste-React/tree/main/namaste-zomato",
-  //   tech: ["React", "JavaScript", "Tailwind CSS"],
-  //   details: [
-  //     "Developed a React application that allows users to search for restaurants in their vicinity and view their menu and other details.",
-  //     "Implemented a robust search functionality that allows users to search for restaurants by name, cuisine, and location.",
-  //   ],
-  // },
+  {
+    id: 4,
+    label: "In Browser Markdown Editor",
+    img_url: "/assets/images/markdown.jpg",
+    live_link: "https://markdown-editor-app-git-main-mriganka5137.vercel.app/",
+    github_link: "https://github.com/Mriganka5137/markdown-editor-app",
+    tech: ["Next.js", "MongoDB", "Tailwind CSS"],
+    details: [
+      "Developed a Next.js application that allows users to create, edit, and delete markdown files.",
+      " Implemented dark and light mode functionality: Users can switch between light and dark mode, enhancing customization and user engagement.",
+    ],
+  },
   {
     id: 5,
     label: "Dribble Clone",
