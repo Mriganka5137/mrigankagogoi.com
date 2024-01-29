@@ -7,7 +7,7 @@ import { ModeToggle } from "@/components/theme-toggle";
 const NavBar = () => {
   return (
     <div
-      className=" max-w-screen-desktop mx-auto  px-[165px] py-9 flex justify-between max-laptop:px-[30px] relative max-tablet:px-4"
+      className=" max-w-screen-desktop mx-auto  px-[165px] py-9 flex justify-between max-laptop:px-[30px] relative max-tablet:px-4 "
       id="navbar"
     >
       <Link href="/" className=" z-10">
