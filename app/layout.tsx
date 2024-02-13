@@ -1,11 +1,10 @@
-import type { Metadata } from "next";
-import { Inter, Poppins } from "next/font/google";
-import { Space_Grotesk } from "next/font/google";
-import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
-import { cn } from "@/lib/utils";
-import NavBar from "./components/NavBar";
-import Footer from "./components/Footer";
+import type { Metadata } from "next";
+import { Inter, Space_Grotesk } from "next/font/google";
+import Footer from "./_components/Footer";
+import NavBar from "./_components/NavBar";
+import "./globals.css";
+import { Toaster } from "@/components/ui/sonner";
 const inter = Inter({ subsets: ["latin"] });
 
 const spaceGrotesk = Space_Grotesk({
@@ -30,7 +29,6 @@ export default function RootLayout({
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
-          // enableSystem
           disableTransitionOnChange
         >
           <NavBar />
@@ -39,6 +37,7 @@ export default function RootLayout({
             {children}
           </div>
           <Footer />
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>
