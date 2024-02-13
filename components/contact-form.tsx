@@ -15,6 +15,8 @@ import {
 } from "@/components/ui/form";
 import { ContactSchema } from "@/schemas";
 import { Input } from "./ui/input";
+import { contactMe } from "@/lib/actions/contact.action";
+import { toast } from "sonner";
 
 export const ContactForm = () => {
   const form = useForm<z.infer<typeof ContactSchema>>({
@@ -26,8 +28,15 @@ export const ContactForm = () => {
     },
   });
 
-  const onSubmit = (data: z.infer<typeof ContactSchema>) => {
-    alert(JSON.stringify(data));
+  const onSubmit = async (data: z.infer<typeof ContactSchema>) => {
+    try {
+      const response = await contactMe(data);
+      form.reset();
+      toast.success("Message sent successfully");
+    } catch (error) {
+      console.error(error);
+      toast.error("Failed to send message");
+    }
   };
 
   return (
@@ -45,10 +54,11 @@ export const ContactForm = () => {
                 <FormLabel>Name</FormLabel>
                 <FormControl>
                   <Input
+                    disabled={form.formState.isSubmitting}
                     {...field}
                     type="text"
                     placeholder="Your name"
-                    className="border-b border-foreground bg-transparent   p-5 text-xl w-full"
+                    className="  p-5 text-xl w-full"
                   />
                 </FormControl>
                 <FormMessage />
@@ -63,10 +73,11 @@ export const ContactForm = () => {
                 <FormLabel>Email</FormLabel>
                 <FormControl>
                   <Input
+                    disabled={form.formState.isSubmitting}
                     {...field}
                     type="email"
                     placeholder="Your email"
-                    className="border-b border-foreground bg-transparent p-5 text-xl w-full"
+                    className="p-5 text-xl w-full"
                   />
                 </FormControl>
                 <FormMessage />
@@ -81,9 +92,10 @@ export const ContactForm = () => {
                 <FormLabel htmlFor="">Message</FormLabel>
                 <FormControl>
                   <Textarea
+                    disabled={form.formState.isSubmitting}
                     placeholder="Your Message to me"
                     {...field}
-                    className="mt-5 h-52  p-5 text-xl"
+                    className="mt-5 min-h-52 h-52 p-5 text-xl"
                   />
                 </FormControl>
                 <FormMessage />
@@ -91,7 +103,12 @@ export const ContactForm = () => {
             )}
           />
         </div>
-        <Button variant="default" className="w-full" type="submit">
+        <Button
+          disabled={form.formState.isSubmitting}
+          variant="default"
+          className="w-full text-lg  bg-customGreen hover:bg-green-700"
+          type="submit"
+        >
           Submit
         </Button>
       </form>
