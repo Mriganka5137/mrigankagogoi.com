@@ -45,13 +45,13 @@ export const ContactForm = () => {
         onSubmit={form.handleSubmit(onSubmit)}
         className=" space-y-6 w-1/2 max-laptop:w-full mx-auto text-secondary-foreground"
       >
-        <div className=" space-y-4">
+        <div className=" space-y-6">
           <FormField
             control={form.control}
             name="name"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Name</FormLabel>
+                <FormLabel className="text-lg">Name</FormLabel>
                 <FormControl>
                   <Input
                     disabled={form.formState.isSubmitting}
@@ -70,7 +70,7 @@ export const ContactForm = () => {
             name="email"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Email</FormLabel>
+                <FormLabel className="text-lg">Email</FormLabel>
                 <FormControl>
                   <Input
                     disabled={form.formState.isSubmitting}
@@ -89,7 +89,9 @@ export const ContactForm = () => {
             name="message"
             render={({ field }) => (
               <FormItem>
-                <FormLabel htmlFor="">Message</FormLabel>
+                <FormLabel className="text-lg" htmlFor="">
+                  Message
+                </FormLabel>
                 <FormControl>
                   <Textarea
                     disabled={form.formState.isSubmitting}

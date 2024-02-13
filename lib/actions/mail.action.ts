@@ -19,13 +19,12 @@ export async function sendMail({ body, name, subject, to }: IMail) {
     },
   });
 
-  try {
-    const testResult = await transport.verify();
-    console.log(testResult);
-  } catch (error) {
-    console.log(error);
-    return;
-  }
+  // try {
+  //   const testResult = await transport.verify();
+  // } catch (error) {
+  //   console.log(error);
+  //   return;
+  // }
 
   try {
     const sendResult = await transport.sendMail({
