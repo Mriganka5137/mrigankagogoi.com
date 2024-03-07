@@ -1,33 +1,48 @@
+import { FaNode, FaReact } from "react-icons/fa";
+import {
+  SiJavascript,
+  SiMongodb,
+  SiNextdotjs,
+  SiTypescript,
+} from "react-icons/si";
+
 export const skills = [
   {
     id: 1,
-    label: "HTML",
+    label: "React",
     experience: 4,
+    icon: FaReact,
   },
   {
     id: 2,
-    label: "CSS",
+    label: "Next.js",
     experience: 4,
+
+    icon: SiNextdotjs,
   },
   {
     id: 3,
     label: "JavaScript",
     experience: 4,
+    icon: SiJavascript,
   },
   {
     id: 4,
-    label: "React",
+    label: "TypeScript",
     experience: 2,
+    icon: SiTypescript,
   },
   {
     id: 5,
-    label: "Next.js",
+    label: "MongoDB",
     experience: 2,
+    icon: SiMongodb,
   },
   {
     id: 6,
     label: "Node.js",
     experience: 2,
+    icon: FaNode,
   },
 ];
 

@@ -122,10 +122,9 @@
   }
 }
 
-.skill h2:hover {
-  @apply text-customGreen;
+.skill-icon:hover {
   animation-name: hover-effect;
-  animation-duration: 300ms;
+  animation-duration: 500ms;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 }
@@ -137,7 +136,7 @@
   }
   50% {
     transform: translateY(-5px);
-    transform: translateX(-5px);
+    /* transform: translateX(-5px); */
   }
   100% {
     transform: translateY(0);
