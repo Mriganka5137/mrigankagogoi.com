@@ -1,8 +1,11 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import HeroImage from "@/public/assets/images/profile2.jpeg";
+import { usePathname } from "next/navigation";
 
 const Hero = () => {
+  const path = usePathname();
   return (
     <div
       className="border-b-[1px] border-white pb-52 mb-10  gap-5  flex flex-col  max-tablet:items-center max-tablet:text-center max-laptop:pb-32 max-tablet:pb-24 "
@@ -25,7 +28,11 @@ const Hero = () => {
       </p>
 
       <Link
-        href="https://twitter.com/_Mriganka_"
+        href={
+          path === "/upwork"
+            ? "https://www.upwork.com/freelancers/mriganka"
+            : "https://twitter.com/_Mriganka_"
+        }
         target="_blank"
         className=" text-foreground underline decoration-customGreen underline-offset-[15px]  tracking-widest  hover:text-customGreen decoration-[3px] duration-300 ease-in-out w-fit"
       >

@@ -1,6 +1,11 @@
+"use client";
 import { ContactForm } from "@/components/contact-form";
+import { usePathname } from "next/navigation";
 
 const Footer = () => {
+  const path = usePathname();
+  if (path === "/upwork") return null;
+
   return (
     <footer className=" bg-zinc-100  dark:bg-black">
       <div className="flex max-laptop:flex-col max-w-screen-desktop mx-auto  px-[100px] py-20 max-laptop:px-[30px] max-tablet:px-3 justify-between gap-10">
