@@ -26,11 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className={` ${spaceGrotesk.variable}`}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          disableTransitionOnChange
-        >
+        <ThemeProvider>
           <NavBar />
           <div className="dark:bg-dot-white/[0.2] bg-dot-black/[0.1] relative">
             <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
